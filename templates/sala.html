@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala</title>
+    <style>
+        .reprovado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de notas</h1>
+    <table border="1" cellpading="8">
+        <tr>
+            <th>Nome</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+        </tr>
+        {% for aluno in sala %}
+        <tr>
+            <td>
+                {% if aluno[1] < 6.0%}
+                <span class="reprovado">{{ aluno[0] }}</span>
+            {% else %}
+                {{aluno[0]}}
+            {%endif%}
+            </td>
+            <td>{{ aluno[1] }}</td>
+            <td>{{ aluno[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

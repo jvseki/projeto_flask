@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma</title>
+</head>
+<body>
+    <h1>Nota da Turma</h1>
+    <ul>
+        {% for aluno in turma %}
+        <li>{{aluno[0] }} - Notas: {{aluno[1] }}, {{aluno[2] }}</li>
+        {%endfor%}
+    </ul>
+    <hr>
+   <p>Nota final de {{ turma[0][0] }}: {{ turma[0][-1] }}</p>
+</body>
+</html>

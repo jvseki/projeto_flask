@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moeda</title>
+</head>
+<body>
+    <h1>Conversor De Real para Dólar</h1>
+    <p>Taxa atual: R$ {{ "%2f"|format(taxa_dolar) }} por US$ 1</p>
+    <p>Valor em Real: R$ {{ ".%2f"|format(valor_real) }}</p>
+    <p>Valor em Dólar: Us$ {{".%2f"|format(valor_dolar) }}</p>
+</body>
+</html>

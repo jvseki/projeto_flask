@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Da Escola</title>
+</head>
+<body>
+    <H1>Relatório de Desempenho Do Aluno</H1>
+    <p> <strong>Aluno:</strong>{{ nome }}</p>
+    <p> <strong>Media Final:</strong>{{"%.1F"|format(nota) }}</p>
+
+    <p>
+        <strong>Staus:</strong>
+        <span class="{{ 'aprovado' if nota >= 7.0 else 'reprovado'}}">
+            {{ 'Aprovado' if nota >= 7.0 else 'Reprovado' }}
+
+        </span>
+    </p>
+</body>
+</html>

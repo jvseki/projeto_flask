@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Autenticação</title>
+</head>
+<body>
+    <h1>Bem-vindo, {{ login }}!</h1>
+
+    {% if admin %}
+        <button>Acesso Admin</button>
+    {% else %}
+        <p>Você não tem acesso de administrador.</p>
+    {% endif %}
+
+    <h2>Suas matérias:</h2>
+    {% for materias in materias %}
+        {% if materias.startswith('P') %}
+            <p><strong>{{ materia }}</strong></p>
+        {% else %}
+            <p>{{ materias }}</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
