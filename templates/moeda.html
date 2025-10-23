@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Conversor De Real para Dólar</h1>
-    <p>Taxa atual: R$ {{ "%2f"|format(taxa_dolar) }} por US$ 1</p>
-    <p>Valor em Real: R$ {{ ".%2f"|format(valor_real) }}</p>
-    <p>Valor em Dólar: Us$ {{".%2f"|format(valor_dolar) }}</p>
+    <p>Taxa atual: R$ {{ "%.2f"|format(taxa_dolar) }} por US$ 1</p>
+    <p>Valor em Real: R$ {{ "%.2f"|format(valor_real) }}</p>
+    <p>Valor em Dólar: Us$ {{"%.2f"|format(valor_dolar) }}</p>
 </body>
 </html>

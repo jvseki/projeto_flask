@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 USUARIO_LOGADO = "Prof. Xavier"
@@ -34,7 +34,7 @@ def nome(nome_usuario):
 @app.route("/moeda")
 def moeda():
  taxa_dolar = 5.25
- valor_real = 100
+ valor_real = 100.
 
  valor_dolar = valor_real / taxa_dolar
 
